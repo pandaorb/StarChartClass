@@ -1,0 +1,11 @@
+@startuml
+
+class a{
+method()
+}
+
+class b{
+}
+
+
+@enduml
