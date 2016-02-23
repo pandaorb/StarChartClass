@@ -81,6 +81,6 @@ class TestingClass(unittest.TestCase):
         self.assertRaises(ValueError, lambda: myStarCatalog.getStarData(5000))
     
     # Test that getStarData returns information with valid id
-    def test_getStarDataValidShouldStoreAStar(self):
-        myStarCatalog = StarCatalog()
-        self.assert_(len(myStarCatalog.getStarData(1)) > 0, 'List is populated')
+    #def test_getStarDataValidShouldStoreAStar(self):
+    #    myStarCatalog = StarCatalog()
+    #    self.assert_(len(myStarCatalog.getStarData(1)) > 0, 'List is populated')
