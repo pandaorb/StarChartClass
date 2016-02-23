@@ -1,0 +1,10 @@
+
+import unittest
+from Assignment.prod.StarCatalog import StarCatalog
+
+class TestingClass(unittest.TestCase):
+
+    # Test that an instance of StarCatalog is creates
+    def initTestShouldInitialize(self):
+        myStarCatalog = StarCatalog()
+        self.assertIsInstance(myStarCatalog, StarCatalog)
