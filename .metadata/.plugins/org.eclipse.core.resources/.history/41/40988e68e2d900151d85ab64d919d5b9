@@ -37,22 +37,3 @@ class TestingClass(unittest.TestCase):
         myStarCatalog.loadCatalog("sao.txt")
         myStarCatalog.emptyCatalog()
         self.assert_(len(myStarCatalog.starList) == 0, 'Catalog Emptied')
-        
-    # Test that getStarCount raises error if
-    #    dimmest = 'a'
-    #    dimmest = 31
-    #    brightest = 'a'
-    #    brightest = -31
-    def test_getStarCountDimmestLetterShouldRaiseError(self):
-        pass
-    
-    def test_getStarCountDimmestOutOfBoundsShouldRaiseError(self):
-        pass
-    
-    def test_getStarCountBrightestLetterShouldRaiseError(self):
-        pass
-    
-    def test_getStarCountBrightestOutOfBoundsShouldRaiseError(self):
-        pass
-    
-    
