@@ -15,7 +15,7 @@ class TestingClass(unittest.TestCase):
     #   Magnitude = -45
     def test_loadCatalogNoneShouldThrowError(self):
         myStarCatalog = StarCatalog()
-        self.assertRaises(StarCatalog.ValueError, myStarCatalog.loadCatalog())
+        self.assertRaises(ValueError, myStarCatalog.loadCatalog())
         
     #def test_loadCatalogDNEShouldThrowError(self):
     #    self.assertRaises(ValueError, StarCatalog.loadCatalog("DNE.txt"))
