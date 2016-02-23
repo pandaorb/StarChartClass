@@ -72,4 +72,4 @@ class TestingClass(unittest.TestCase):
     # Test that getStarData returns information
     def test_getStarDataValidShouldStoreAStar(self):
         myStarCatalog = StarCatalog()
-        self.assert_(len(myStarCatalog.getStarData(1)) > 0, 'List is populated')
+        self.assert_(len(myStarCatalog.getStarData(1)) == 4, 'List is populated')
