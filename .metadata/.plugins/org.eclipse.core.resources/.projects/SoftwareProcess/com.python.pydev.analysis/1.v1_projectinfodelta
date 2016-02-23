@@ -1,10 +1,1 @@
-INSTUPAssignment.prod.__init__
-/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/prod/__init__.py
-INFOS:&&1|1|2|0&&2|3|2|1&&2|4|2|1&&2|5|2|1&&2|6|2|1&&2|7|2|1
-Assignment.prod.__init__=2
-getStarData=7
-getStarCount=6
-__init__=3
-loadCatalog=4
-emptyCatalog=5
-StarCatalog=1
+DELSTRAssignment.test.StarCatalogTest

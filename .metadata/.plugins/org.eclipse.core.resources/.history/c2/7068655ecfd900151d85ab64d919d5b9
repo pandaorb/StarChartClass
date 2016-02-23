@@ -18,8 +18,7 @@ class TestingClass(unittest.TestCase):
     #    self.assertRaises(ValueError, myStarCatalog.loadCatalog())
         
     def test_loadCatalogDNEShouldThrowError(self):
-        myStarCatalog = StarCatalog()
-        self.assertRaises(ValueError, myStarCatalog.loadCatalog("DNE.txt"))
+        self.assertRaises(ValueError, StarCatalog.loadCatalog("DNE.txt"))
         
     #def test_loadCatalogOutOfBoundsMagnitudeShouldThrowError(self):
     #    self.assertRaises(ValueError, StarCatalog.loadCatalog("sao.txt", -45))
