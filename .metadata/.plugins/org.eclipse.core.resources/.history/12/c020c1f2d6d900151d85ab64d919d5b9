@@ -42,18 +42,18 @@ class StarCatalog:
                 #declination = float(star[139:149])
                 
                 #ensure this is not a duplicate star
-                #if catalogNum in self.starIds:
-                #    raise ValueError('StarCatalog.loadCatalog:  Duplicate stars may not be added to the catalog.')
+                if catalogNum in self.starIds:
+                    raise ValueError('StarCatalog.loadCatalog:  Duplicate stars may not be added to the catalog.')
                 #ensure this is a valid star
-                #elif newMagnitude < Magnitude and \
-                #   rightA >= 0 and \
-                #   rightA < 360 and \
-                #   declination >= -90 and \
-                #   declination <= 90:
-                #    self.setMagnitudeBoundries(newMagnitude)
-                #    newStar = Star.Star(catalogNum, newMagnitude, rightA, declination)
-                #    self.starList.append(newStar)
-                #    self.starIds.update(catalogNum)
+                elif newMagnitude < Magnitude and \
+                   rightA >= 0 and \
+                   rightA < 360 and \
+                   declination >= -90 and \
+                   declination <= 90:
+                    self.setMagnitudeBoundries(newMagnitude)
+                    newStar = Star.Star(catalogNum, newMagnitude, rightA, declination)
+                    self.starList.append(newStar)
+                    self.starIds.update(catalogNum)
             
             #return number of stars added        
             return len(self.starList); 
