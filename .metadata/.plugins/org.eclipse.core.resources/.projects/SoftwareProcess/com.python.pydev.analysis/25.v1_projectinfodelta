@@ -1,11 +1,1 @@
-INSTUPAssignment.test.StarCatalogTest
-/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/test/StarCatalogTest.py
-INFOS:&&1|1|2|0&&2|3|2|1&&2|4|2|1&&2|5|2|1&&2|6|2|1&&2|7|2|1&&2|8|2|1
-loadCatalogNoneShouldThrowError=4
-loadCatalogOutOfBoundsMagnitudeShouldThrowError=6
-initTestShouldInitialize=3
-loadCatalogDNEShouldThrowError=5
-Assignment.test.StarCatalogTest=2
-TestingClass=1
-loadCatalogDefaultShouldCreateList=8
-loadCatalogValidShouldCreateList=7
+DELSTRAssignment.test.StarCatalogTest

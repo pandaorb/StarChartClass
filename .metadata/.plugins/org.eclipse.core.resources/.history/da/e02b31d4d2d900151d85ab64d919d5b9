@@ -50,8 +50,7 @@ class StarCatalog:
                    declination >= -90 and \
                    declination <= 90:
                     self.setMagnitudeBoundries(newMagnitude)
-                    newStar = Star(catalogNum, newMagnitude, rightA, declination)
-                    self.starList.append(newStar)
+                    self.starList.append(Star(catalogNum, newMagnitude, rightA, declination))
                     self.starIds.update(catalogNum)
             
             #return number of stars added        
