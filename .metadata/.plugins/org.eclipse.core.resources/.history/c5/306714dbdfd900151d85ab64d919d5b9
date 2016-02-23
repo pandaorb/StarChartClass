@@ -30,11 +30,8 @@ class StarCatalog:
             #open file
             fullChart = open(starFile, 'r')
             
-            wat = list()
-            
             #store file as list of lines
             readChart = fullChart.readlines()
-            
             
             #read each line and store data if appropriate
             for star in readChart:
@@ -42,7 +39,6 @@ class StarCatalog:
                 newMagnitude = float(star[80:83])
                 rightA = float(star[129:138])
                 declination = star[139:149]
-                
                 
                 #ensure this is not a duplicate star
                 if catalogNum in self.starIds:
@@ -55,11 +51,11 @@ class StarCatalog:
 #                    declination <= 90:
                     self.setMagnitudeBoundries(newMagnitude)
                     newStar = Star.Star(catalogNum, newMagnitude, rightA, declination)
-                    wat.append(newStar)
+                    self.starList.append("newStar")
                     self.starIds.update(catalogNum)
             
             #return number of stars added        
-            return len(wat); 
+            return len(self.starList); 
         
     def emptyCatalog(self): 
         "Remove everything from catalog"
