@@ -74,7 +74,7 @@ class TestingClass(unittest.TestCase):
     #    starID = 5000
     def test_getStarDataLetterShouldRaiseError(self):
         myStarCatalog = StarCatalog()
-        self.assertRaises(ValueError, lambda: myStarCatalog.getStarData(5000))
+        self.assertRaises(ValueError, lambda: myStarCatalog.getStarData('a'))
     
     # Test that getStarData returns information with valid id
     def test_getStarDataValidShouldStoreAStar(self):
