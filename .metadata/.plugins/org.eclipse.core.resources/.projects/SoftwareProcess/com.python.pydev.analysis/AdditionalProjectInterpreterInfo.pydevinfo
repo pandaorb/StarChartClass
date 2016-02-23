@@ -5,46 +5,43 @@ Assignment.prod.__init__|1456186542000000000|/home/softwareprocess/Desktop/softw
 Assignment.sandbox.__init__|1454796637000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/sandbox/__init__.py
 Assignment.test.StarCatalogSample|1455853418000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/test/StarCatalogSample.py
 Assignment.__init__|1455854036000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/__init__.py
-Assignment.test.StarCatalogTest|1456194177000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/test/StarCatalogTest.py
-Assignment.prod.StarCatalog|1456195216000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/prod/StarCatalog.py
+Assignment.prod.StarCatalog|1456198761000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/prod/StarCatalog.py
 Assignment.test.__init__|1454796637000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/test/__init__.py
 Assignment.prod.Star|1456163066000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/prod/Star.py
 -- END DISKCACHE
 -- START DICTIONARY
-11
-8=StarCatalog.setMagnitudeBoundries
-9=Star.__init__
-7=Star
+9
+7=StarCatalog.setMagnitudeBoundries
+8=Star.__init__
+6=Star
 1=Assignment.test.StarCatalogSample
-10=TestStarCatalog
-5=Assignment.__init__
-4=Assignment.test.StarCatalogTest
+9=TestStarCatalog
+4=Assignment.__init__
 2=Assignment.prod.StarCatalog
-11=TestingClass
 3=Assignment.prod.Star
-6=StarCatalog
+5=StarCatalog
 -- END DICTIONARY
 -- START TREE 1
 4
 all|1|allStars!11@
 dia|2|diagnosticString2!11@diagnosticString1!11@
 sta|9|starCount!11@starsBetween2And5!11@stars!11@StarCatalog!17@star!11@starsLE5!11@starsDeleted!11@starsGE3!11@Star!25@
-tes|2|TestingClass!33@TestStarCatalog!41@
+tes|1|TestStarCatalog!33@
 -- END TREE
 -- START TREE 2
 14
-__i|2|__init__!6&18@__init__!7&26@
-bri|2|brightestVal!6&19@brightestVal!8&19@
-dec|1|declination!9&27@
-dim|2|dimmestVal!6&19@dimmestVal!8&19@
-emp|1|emptyCatalog!6&18@
-get|2|getStarCount!6&18@getStarData!6&18@
-ide|1|identifier!9&27@
+__i|2|__init__!5&18@__init__!6&26@
+bri|2|brightestVal!5&19@brightestVal!7&19@
+dec|1|declination!8&27@
+dim|2|dimmestVal!5&19@dimmestVal!7&19@
+emp|1|emptyCatalog!5&18@
+get|2|getStarCount!5&18@getStarData!5&18@
+ide|1|identifier!8&27@
 ini|0|
-loa|1|loadCatalog!6&18@
-mag|1|magnitude!9&27@
-r_a|1|r_ascension!9&27@
-set|2|setUp!10&42@setMagnitudeBoundries!6&18@
-sta|2|starIds!6&19@starList!6&19@
-tes|6|test_loadCatalogNoneShouldThrowError!11&34@testShouldInitializeStarCatalog!10&42@test_loadCatalogOutOfBoundsMagnitudeShouldThrowError!11&34@test_loadCatalogDNEShouldThrowError!11&34@test_initTestShouldInitialize!11&34@test_loadCatalogValidShouldCreateList!11&34@
+loa|1|loadCatalog!5&18@
+mag|1|magnitude!8&27@
+r_a|1|r_ascension!8&27@
+set|2|setUp!9&34@setMagnitudeBoundries!5&18@
+sta|2|starIds!5&19@starList!5&19@
+tes|1|testShouldInitializeStarCatalog!9&34@
 -- END TREE
