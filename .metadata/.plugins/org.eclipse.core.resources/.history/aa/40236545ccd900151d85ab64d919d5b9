@@ -15,9 +15,7 @@ class StarCatalog:
     def loadCatalog(self, starFile=None, Magnitude=6.0): 
         "Read from file to populate Star Catalog with appropriate magnitudes"        
         #check for invalid file name
-        if starFile == None:
-            raise ValueError('StarCatalog.loadCatalog: File name must be specified.')
-        elif len(starFile) <= 0:
+        if len(starFile) <= 0:
             raise ValueError('StarCatalog.loadCatalog:  File name is invalid.')
         #check for if file DNE
         elif not os.path.exists(starFile):
