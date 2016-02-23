@@ -13,8 +13,8 @@ class TestingClass(unittest.TestCase):
     #   starFile = None
     #   starFile ="DNE.txt"
     #   Magnitude = -45
-    #def test_loadCatalogNoneShouldThrowError(self):
-    #    self.assertRaises(ValueError, StarCatalog.loadCatalog())
+    def test_loadCatalogNoneShouldThrowError(self):
+        self.assertRaises(ValueError, StarCatalog.loadCatalog())
         
     #def test_loadCatalogDNEShouldThrowError(self):
     #    self.assertRaises(ValueError, StarCatalog.loadCatalog("DNE.txt"))
