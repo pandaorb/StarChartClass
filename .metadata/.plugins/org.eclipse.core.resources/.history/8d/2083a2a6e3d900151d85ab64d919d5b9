@@ -67,5 +67,5 @@ class TestingClass(unittest.TestCase):
     def test_getStarCountValidShouldReturnANumber(self):
         myStarCatalog = StarCatalog()
         myStarCatalog.loadCatalog("sao.txt")
-        self.assert_(myStarCatalog.getStarCount(30, -30) > 0, 'Returned Value')
+        self.assert_(myStarCatalog.getStarCount(30, -31) > 0, 'Returned Value')
     
