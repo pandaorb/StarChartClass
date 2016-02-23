@@ -37,7 +37,7 @@ class StarCatalog:
             for star in readChart:
                 catalogNum = star[0:5]
                 newMagnitude = float(star[80:83])
-                print(newMagnitude + "\n")
+                print(newMagnitude)
                 #rightA = float(star[129:138])
                 #declination = float(star[139:149])
                 
