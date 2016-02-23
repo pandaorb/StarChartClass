@@ -12,14 +12,11 @@ class TestingClass(unittest.TestCase):
     # Test that loadCatalog throws ValueError when
     #   starFile = None
     #   starFile ="DNE.txt"
+    #   Magnitude = 6.0 - default
     #   Magnitude = -45
     #   Magnitude = 20
-    def loadCatalogNoneShouldThrowError(self):
+    def loadCatalogNoneShouldThrowException(self):
         self.assertRaises(ValueError, StarCatalog.loadCatalog())
         
-    def loadCatalogDNEShouldThrowError(self):
+    def loadCatalogDNEShouldThrowException(self):
         self.assertRaises(ValueError, StarCatalog.loadCatalog("DNE.txt"))
-        
-    def loadCatalogOutOfBoundsMagnitudeShouldThrowError(self):
-        self.assertRaises(ValueError, StarCatalog.loadCatalog("sao.txt", -45))
-    
