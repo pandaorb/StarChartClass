@@ -85,7 +85,7 @@ class StarCatalog:
     def getStarData(self, starId):
         "Get data for specified star"
         #check if id passed in is valid
-        if starId == None or math.isnan(float(starId)):
+        if starId == None or math.isnan(starId):
             raise ValueError('StarCatalog.getStarData:  Invalid ID')
         
         #create a list for returning data
