@@ -36,23 +36,32 @@ class StarCatalog:
             #read each line and store data if appropriate
             for star in readChart:
                 catalogNum = star[0:5]
+                print(star)
                 newMagnitude = float(star[80:83])
+                print(star)
                 rightA = float(star[129:138])
+                print(star)
                 declination = star[139:149]
+                print(star)
+#                 print("Id: " + catalogNum + "\n")
+#                 print("Magnitude: " + str(newMagnitude) + "\n")
+#                 print("Right Asc: " + str(rightA) + "\n")
+#                 print("Declination: " + declination + "\n")
+                
                 
                 #ensure this is not a duplicate star
-                if catalogNum in self.starIds:
-                    raise ValueError('StarCatalog.loadCatalog:  Duplicate stars may not be added to the catalog.')
+                #if catalogNum in self.starIds:
+                #    raise ValueError('StarCatalog.loadCatalog:  Duplicate stars may not be added to the catalog.')
                 #ensure this is a valid star
-                elif newMagnitude < Magnitude and \
-                   rightA >= 0 and \
-                   rightA < 360 and \
-                   declination >= -90 and \
-                   declination <= 90:
-                    self.setMagnitudeBoundries(newMagnitude)
-                    newStar = Star.Star(catalogNum, newMagnitude, rightA, declination)
-                    self.starList.append(newStar)
-                    self.starIds.update(catalogNum)
+                #elif newMagnitude < Magnitude and \
+                #   rightA >= 0 and \
+                #   rightA < 360 and \
+                #   declination >= -90 and \
+                #   declination <= 90:
+                #    self.setMagnitudeBoundries(newMagnitude)
+                #    newStar = Star.Star(catalogNum, newMagnitude, rightA, declination)
+                #    self.starList.append(newStar)
+                #    self.starIds.update(catalogNum)
             
             #return number of stars added        
             return len(self.starList); 
