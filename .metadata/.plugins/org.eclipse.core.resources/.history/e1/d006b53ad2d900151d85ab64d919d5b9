@@ -38,7 +38,7 @@ class StarCatalog:
                 catalogNum = star[1:6]
                 newMagnitude = float(star[81:84])
                 rightA = float(star[130:139])
-                declination = float(star[140:150])
+                declination = float(star[140-150])
                 
                 #ensure this is not a duplicate star
                 if catalogNum in self.starIds:
