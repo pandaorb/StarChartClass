@@ -1,1 +1,9 @@
-DELSTRAssignment.prod.__init__
+INSTUPAssignment.test.StarCatalogTest
+/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/test/StarCatalogTest.py
+INFOS:&&1|1|2|0&&2|3|2|1&&2|4|2|1&&2|5|2|1&&2|6|2|1
+test_loadCatalogOutOfBoundsMagnitudeShouldThrowError=6
+test_loadCatalogDNEShouldThrowError=5
+test_loadCatalogNoneShouldThrowError=4
+Assignment.test.StarCatalogTest=2
+TestingClass=1
+test_initTestShouldInitialize=3
