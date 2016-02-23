@@ -36,4 +36,4 @@ class TestingClass(unittest.TestCase):
         myStarCatalog = StarCatalog()
         myStarCatalog.loadCatalog("sao.txt")
         myStarCatalog.emptyCatalog()
-        self.assert_(len(myStarCatalog) == 0, 'Catalog Emptied')
+        self.assert_(len(myCatalog) == 0, 'Catalog Emptied')
