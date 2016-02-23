@@ -27,14 +27,13 @@ class StarCatalog:
         elif Magnitude > 30 or Magnitude < -30:
             raise ValueError('StarCatalog.loadCatalog:  Magnitude must be between -30 and 30.')
         #parameters are valid, so continue
-        else:      
+        else:
             #open file
             fullChart = open(starFile, 'r')
 
             #store file as list of lines
-            readChart = fullChart.readlines() 
-               
-            newlyAddedCount = 0
+            readChart = fullChart.readlines()    
+            
             #read each line and store data if appropriate
             for star in readChart:
                 catalogNum = star[0:5]
@@ -51,10 +50,9 @@ class StarCatalog:
                     newStar = Star.Star(catalogNum, newMagnitude, rightA, declination)
                     self.starList.append(newStar)
                     self.starIds.update(catalogNum)
-                    newlyAddedCount += 1
             
             #return number of stars added        
-            return newlyAddedCount; 
+            return len(self.starList); 
         
     def emptyCatalog(self): 
         "Remove everything from catalog"
