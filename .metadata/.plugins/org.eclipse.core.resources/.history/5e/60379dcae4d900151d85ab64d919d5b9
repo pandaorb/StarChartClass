@@ -69,7 +69,3 @@ class TestingClass(unittest.TestCase):
         myStarCatalog.loadCatalog("sao.txt")
         self.assert_(myStarCatalog.getStarCount(30, -30) > 0, 'Returned Value')
     
-    # Test that getStarData returns information
-    def test_getStarDataValidShouldStoreAStar(self):
-        myStarCatalog = StarCatalog()
-        self.assert_(len(myStarCatalog.getStarData(1)) == 4, 'List is populated')
