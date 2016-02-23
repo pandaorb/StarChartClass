@@ -23,7 +23,7 @@ class TestingClass(unittest.TestCase):
         
     def test_loadCatalogOutOfBoundsMagnitudeShouldThrowError(self):
         myStarCatalog = StarCatalog()
-        self.assertRaises(ValueError, lambda: myStarCatalog.loadCatalog("sao.txt", -45))
+        self.assertRaises(ValueError, myStarCatalog myStarCatalog.loadCatalog("sao.txt", -45))
     
     # Test that loadCatalog populates when 
     #    starFile = "sao.txt" and Magnitude = 20
