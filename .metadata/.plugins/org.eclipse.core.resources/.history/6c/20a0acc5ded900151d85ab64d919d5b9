@@ -31,7 +31,7 @@ class TestingClass(unittest.TestCase):
     def test_loadCatalogValidShouldCreateList(self):
         myStarCatalog = StarCatalog()
         myLength = myStarCatalog.loadCatalog("sao.txt", 20)
-        print("Length here: " + myStarCatalog.starList[0].identifier)
+        print("Length here: " + str(len(myStarCatalog.starList)))
         #self.assert_(myLength >= 0, 'Catalog Populated')
     
     #def test_loadCatalogDefaultShouldCreateList(self):
