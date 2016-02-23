@@ -2,9 +2,11 @@
 <section name="Workbench">
 	<item value="true" key="CommitDialog.showUntracked"/>
 	<list key="CommitDialog.authorValues">
+		<item value="Allison Macdonald &lt;amm0086@auburn.edu&gt;"/>
 		<item value="softwareprocess &lt;softwareprocess@softwareprocess-VirtualBox&gt;"/>
 	</list>
 	<list key="CommitDialog.committerValues">
+		<item value="Allison Macdonald &lt;amm0086@auburn.edu&gt;"/>
 		<item value="softwareprocess &lt;softwareprocess@softwareprocess-VirtualBox&gt;"/>
 	</list>
 	<section name="org.eclipse.egit.ui.COMMIT_DIALOG_SECTION">

@@ -1,6 +1,5 @@
 import Star
 import os.path
-from types import FloatType
 
 class StarCatalog:
     "Create an inventory of stars"
@@ -68,8 +67,6 @@ class StarCatalog:
             dimmest = self.dimmestVal
         if brightest==None:
             brightest = self.brightestVal
-        if not isinstance(dimmest,FloatType):
-            raise ValueError("poop")
         
         #ensure that arguments are valid
         if int(dimmest) > 30:

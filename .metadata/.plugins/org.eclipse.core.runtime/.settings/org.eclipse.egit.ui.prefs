@@ -1,2 +1,3 @@
-commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>Initial configuration</message>\n<message>&\#x0A;&\#x0A;Signed-off-by\: softwareprocess&\#x0A;&lt;softwareprocess@softwareprocess-VirtualBox&gt;</message>\n</messages>
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>&\#x0A;&\#x0A;Signed-off-by\: Allison Macdonald &lt;amm0086@auburn.edu&gt;</message>\n<message>Initial configuration</message>\n<message>&\#x0A;&\#x0A;Signed-off-by\: softwareprocess&\#x0A;&lt;softwareprocess@softwareprocess-VirtualBox&gt;</message>\n</messages>
 eclipse.preferences.version=1
+show_initial_config_dialog=false
