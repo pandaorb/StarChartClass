@@ -81,7 +81,7 @@ class TestingClass(unittest.TestCase):
     #    starID = 1
     def test_getStarDataValidShouldReturnData(self):
         myStarCatalog = StarCatalog()
-        print(myStarCatalog.starList)
+        print(myStarCatalog)
         #myList = myStarCatalog.getStarData(1)
         #self.assert_(myList[1] == 1)
         
