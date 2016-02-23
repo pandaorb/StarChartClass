@@ -34,8 +34,7 @@ class TestingClass(unittest.TestCase):
     
     def test_loadCatalogDefaultShouldCreateList(self):
         myStarCatalog = StarCatalog()
-        myLength = myStarCatalog.loadCatalog("sao.txt")
-        self.assert_(myLength > 0, 'Catalog Populated')
+        self.assert_(myStarCatalog.loadCatalog("sao.txt") > 0, 'Catalog Populated')
     
     # Test that emptyCatalog results in an empty list
     #def test_emptyCatalogShouldResultInEmptyList(self):
