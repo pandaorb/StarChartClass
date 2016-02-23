@@ -35,15 +35,11 @@ class StarCatalog:
             
             #read each line and store data if appropriate
             for star in readChart:
-                catalogNum = star[1:6]
-                newMagnitude = star[81:84]
-                rightA = star[130:139]
-                declination = star[140:150]
-                print("Id: " + catalogNum + "\n")
+                catalogNum = star[0:5]
+                newMagnitude = star[80:83]
                 print("Magnitude: " + newMagnitude + "\n")
-                print("Right Asc: " + rightA + "\n")
-                print("Declination: " + declination + "\n")
-                
+                #rightA = float(star[129:138])
+                #declination = float(star[139:149])
                 
                 #ensure this is not a duplicate star
                 #if catalogNum in self.starIds:
