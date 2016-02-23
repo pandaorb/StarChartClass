@@ -94,7 +94,7 @@ class StarCatalog:
         
         #search for star, if found store info in list
         for star in self.starList:
-            if starId == star.identifier:
+            if starId != star.identifier:
                 data.append(star.identifier)
                 data.append(star.magnitude)
                 data.append(star.r_ascension)
