@@ -77,10 +77,3 @@ class TestingClass(unittest.TestCase):
         myStarCatalog = StarCatalog()
         self.assertRaises(ValueError, lambda: myStarCatalog.getStarData(5000))
         
-    # Test that getStarData returns correct data given valid input
-    #    starID = 1
-    def test_getStarDataValidShouldReturnData(self):
-        myStarCatalog = StarCatalog()
-        myList = myStarCatalog.getStarData(1)
-        self.assert_(myList[1] == 1)
-        
