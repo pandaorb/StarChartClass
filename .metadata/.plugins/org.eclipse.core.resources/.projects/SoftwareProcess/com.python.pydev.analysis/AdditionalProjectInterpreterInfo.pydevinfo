@@ -1,17 +1,35 @@
 -- VERSION_4
 -- START DISKCACHE_2
 /home/softwareprocess/Desktop/softwareProcess/.metadata/.plugins/org.eclipse.core.resources/.projects/SoftwareProcess/com.python.pydev.analysis/v2_indexcache
-Assignment.prod.__init__|1454796637000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/prod/__init__.py
+Assignment.prod.__init__|1455854037000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/prod/__init__.py
 Assignment.sandbox.__init__|1454796637000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/sandbox/__init__.py
-Assignment.__init__|1454796637000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/__init__.py
+Assignment.test.StarCatalogSample|1455853418000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/test/StarCatalogSample.py
+Assignment.__init__|1455854036000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/__init__.py
+Assignment.prod.StarCatalog|1455853419000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/prod/StarCatalog.py
 Assignment.test.__init__|1454796637000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/test/__init__.py
 -- END DISKCACHE
 -- START DICTIONARY
-0
+6
+2=Assignment.prod.__init__
+1=Assignment.test.StarCatalogSample
+6=TestStarCatalog
+4=Assignment.__init__
+3=Assignment.prod.StarCatalog
+5=StarCatalog
 -- END DICTIONARY
 -- START TREE 1
-0
+4
+all|1|allStars!11@
+dia|2|diagnosticString2!11@diagnosticString1!11@
+sta|9|StarCatalog!17@starCount!11@starsBetween2And5!11@stars!11@StarCatalog!25@star!11@starsLE5!11@starsDeleted!11@starsGE3!11@
+tes|1|TestStarCatalog!33@
 -- END TREE
 -- START TREE 2
-0
+6
+__i|2|__init__!5&18@__init__!5&26@
+emp|2|emptyCatalog!5&18@emptyCatalog!5&26@
+get|4|getStarCount!5&26@getStarCount!5&18@getStarData!5&18@getStarData!5&26@
+loa|2|loadCatalog!5&18@loadCatalog!5&26@
+set|1|setUp!6&34@
+tes|1|testShouldInitializeStarCatalog!6&34@
 -- END TREE

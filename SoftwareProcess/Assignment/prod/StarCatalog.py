@@ -1,0 +1,116 @@
+import Star
+import os.path
+
+class StarCatalog:
+    "Create an inventory of stars"
+    starList = []
+    starIds = set()
+    dimmestVal = -30
+    brightestVal = 30
+    
+    def __init__(self):   
+        "Initialize StarCatalog with no information"      
+        pass    
+         
+    def loadCatalog(self, starFile=None, Magnitude=6.0): 
+        "Read from file to populate Star Catalog with appropriate magnitudes"        
+        #check for invalid file name
+        if len(starFile) <= 0:
+            raise ValueError('StarCatalog.loadCatalog:  File name is invalid.')
+        #check for if file DNE
+        elif not os.path.exists(starFile):
+            raise ValueError('StarCatalog.loadCatalog:  Directory does not exist')
+        #check for invalid magnitude
+        elif Magnitude > 30 or Magnitude < -30:
+            raise ValueError('StarCatalog.loadCatalog:  Magnitude must be between -30 and 30.')
+        #parameters are valid, so continue
+        else:
+            #open file
+            fullChart = open(starFile, 'r')
+            
+            #store file as list of lines
+            readChart = fullChart.readlines()
+            
+            #read each line and store data if appropriate
+            for star in readChart:
+                catalogNum = star[1:6]
+                newMagnitude = int(star[81:84])
+                rightA = int(star[130:139])
+                declination = int(star[140-150])
+                
+                #ensure this is not a duplicate star
+                if catalogNum in self.starIds:
+                    raise ValueError('StarCatalog.loadCatalog:  Duplicate stars may not be added to the catalog.')
+                #ensure this is a valid star
+                elif newMagnitude < Magnitude and \
+                   rightA >= 0 and \
+                   rightA < 360 and \
+                   declination >= -90 and \
+                   declination <= 90:
+                    self.setMagnitudeBoundries(newMagnitude)
+                    self.starList.append(Star(catalogNum, newMagnitude, rightA, declination))
+                    self.starIds.update(catalogNum)
+            
+            #return number of stars added        
+            return len(self.starList); 
+        
+    def emptyCatalog(self): 
+        "Remove everything from catalog"
+        numDeleted = len(self.starList)        
+        del self.starList[:]
+        self.starIds.clear()
+        return numDeleted      
+       
+    def getStarCount(self, dimmest=None, brightest=None):  
+        "Count the number of stars between brightest and dimmest"       
+        #assign default value if arguments are None
+        if dimmest==None:
+            dimmest = self.dimmestVal
+        if brightest==None:
+            brightest = self.brightestVal
+        
+        #ensure that arguments are valid
+        if int(dimmest) > 30:
+            raise ValueError('StarCatalog.getStarCount:  Dimmest value invalid.')
+        elif int(brightest) < -30:
+            raise ValueError('StarCatalog.getStarCount:  Brightest value invalid.')
+        elif int(dimmest) < int(brightest):
+            raise ValueError('StarCatalog.getStarCount:  Dimmest magnitude can not be smaller than brightest magnitude.')
+        
+        #count stars within range
+        starCount = 0
+        for star in self.starList:
+            if star.magnitude <= dimmest and star.magnitude >= brightest:
+                starCount += 1
+        return starCount
+          
+    def getStarData(self, starId):
+        "Get data for specified star"
+        #check if id passed in is valid
+        if starId == None:
+            raise ValueError('StarCatalog.getStarData:  Invalid ID')
+        
+        #create a list for returning data
+        data = list()
+        found = False
+        
+        #search for star, if found store info in list
+        for star in self.starList:
+            if starId != star.identifier:
+                data.append(star.identifier)
+                data.append(star.magnitude)
+                data.append(star.r_ascension)
+                data.append(star.declination)
+                found = True
+                
+        if not found:
+            raise ValueError('StarCatalog.getStarData:  This star was not found.')
+        else:
+            return data
+    
+    def setMagnitudeBoundries(self, newMagnitude):
+        "Evaluates new magnitude to determine if it should replace current brightest and dimmest"
+        if newMagnitude < self.brightestVal:
+            self.brightestVal = newMagnitude
+        if newMagnitude > self.dimmestVal:
+            self.dimmestVal = newMagnitude

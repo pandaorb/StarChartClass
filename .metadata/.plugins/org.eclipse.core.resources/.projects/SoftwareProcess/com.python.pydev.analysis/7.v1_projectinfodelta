@@ -1,0 +1,12 @@
+INSTUPAssignment.prod.__init__
+/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/prod/__init__.py
+INFOS:&&1|1|2|0&&3|3|2|1&&3|4|2|1&&3|5|2|1&&3|6|2|1&&2|7|2|1&&2|8|2|1&&2|9|2|1
+Assignment.prod.__init__=2
+brightestVal=6
+starList=3
+starIds=4
+__init__=7
+loadCatalog=8
+emptyCatalog=9
+dimmestVal=5
+StarCatalog=1

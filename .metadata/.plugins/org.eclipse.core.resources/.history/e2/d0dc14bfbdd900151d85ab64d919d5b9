@@ -1,0 +1,24 @@
+import Star
+
+class StarCatalog:
+    "Create an inventory of stars"
+    def __init__(self):         
+        pass    
+         
+    def loadCatalog(self, starFile=None, Magnitude=6.0):         
+        if len(starFile) <= 0:
+            raise ValueError('File name is invalid.')
+        elif Magnitude > 30 or Magnitude < -30:
+            raise ValueError('Magnitude must be between -30 and 30.')
+        else:
+            #read file and keep creating stars
+            return 0; #return number of stars added
+        
+    def emptyCatalog(self):         
+        pass      
+       
+    def getStarCount(self, dimmest=None, brightest=None):         
+        pass   
+          
+    def getStarData(self, starId):         
+        pass

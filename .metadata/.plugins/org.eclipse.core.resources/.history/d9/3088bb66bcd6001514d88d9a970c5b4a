@@ -1,0 +1,3 @@
+class StarCatalog:
+    "Create an inventory of stars"
+    def __init__(self):
