@@ -48,15 +48,15 @@ class StarCatalog:
                 if catalogNum in self.starIds:
                     raise ValueError('StarCatalog.loadCatalog:  Duplicate stars may not be added to the catalog.')
                 #ensure this is a valid star
-                if newMagnitude < Magnitude and \
+                 if newMagnitude < Magnitude and \
                     rightA >= 0 and \
                     rightA < 360 and \
                     declination >= -90 and \
                     declination <= 90:
-                    self.setMagnitudeBoundries(newMagnitude)
-                    newStar = Star.Star(catalogNum, newMagnitude, rightA, declination)
-                    wat.append(newStar)
-                    self.starIds.update(catalogNum)
+                self.setMagnitudeBoundries(newMagnitude)
+                newStar = Star.Star(catalogNum, newMagnitude, rightA, declination)
+                wat.append(newStar)
+                self.starIds.update(catalogNum)
             
             #return number of stars added        
             return len(wat); 
