@@ -1,6 +1,5 @@
 import Star
 import os.path
-import math
 
 class StarCatalog:
     "Create an inventory of stars"
@@ -85,7 +84,7 @@ class StarCatalog:
     def getStarData(self, starId):
         "Get data for specified star"
         #check if id passed in is valid
-        if starId == None or math.isnan(starId):
+        if starId == None:
             raise ValueError('StarCatalog.getStarData:  Invalid ID')
         
         #create a list for returning data
