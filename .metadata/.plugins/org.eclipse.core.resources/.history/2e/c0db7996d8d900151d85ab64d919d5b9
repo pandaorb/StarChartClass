@@ -37,11 +37,11 @@ class StarCatalog:
             for star in readChart:
                 catalogNum = star[1:6]
                 newMagnitude = float(star[81:84])
-                rightA = float(star[130:139])
+                rightA = star[130:139]
                 declination = star[140:150]
                 print("Id: " + catalogNum + "\n")
                 print("Magnitude: " + str(newMagnitude) + "\n")
-                print("Right Asc: " + str(rightA) + "\n")
+                print("Right Asc: " + rightA + "\n")
                 print("Declination: " + declination + "\n")
                 
                 
