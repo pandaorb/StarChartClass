@@ -30,6 +30,7 @@ class TestingClass(unittest.TestCase):
     #    starFile = "sao.txt" and Magnitude = 6.0 - default
     def test_loadCatalogValidShouldCreateList(self):
         myStarCatalog = StarCatalog()
+        
         self.assert_(myStarCatalog.loadCatalog("sao.txt", 20) > 0, 'Catalog Populated')
     
     #def test_loadCatalogDefaultShouldCreateList(self):
