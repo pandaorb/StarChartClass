@@ -70,6 +70,8 @@ class StarCatalog:
             dimmest = self.dimmestVal
         if brightest==None:
             brightest = self.brightestVal
+        #if not isinstance or not isinstance(brightest, float):
+        #    raise ValueError('StarCatalog.getStarCount:  Dimmest or brightest value invalid.')
         
         #ensure that arguments are valid
         if int(dimmest) > 30:
