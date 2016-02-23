@@ -1,15 +1,1 @@
-INSTUPAssignment.test.StarCatalogTest
-/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/test/StarCatalogTest.py
-INFOS:&&1|1|2|0&&2|3|2|1&&2|4|2|1&&2|5|2|1&&2|6|2|1&&2|7|2|1&&2|8|2|1&&2|9|2|1&&2|10|2|1&&2|11|2|1&&2|12|2|1
-test_getStarCountDimmestOutOfBoundsShouldRaiseError=10
-test_getStarCountDimmestLetterShouldRaiseError=9
-test_emptyCatalogShouldResultInEmptyList=8
-test_loadCatalogOutOfBoundsMagnitudeShouldThrowError=6
-test_loadCatalogDNEShouldThrowError=5
-test_loadCatalogNoneShouldThrowError=4
-test_getStarCountBrightestLetterShouldRaiseError=11
-test_getStarCountBrightestOutOfBoundsShouldRaiseError=12
-Assignment.test.StarCatalogTest=2
-test_loadCatalogValidShouldCreateList=7
-TestingClass=1
-test_initTestShouldInitialize=3
+DELSTRAssignment.test.StarCatalogTest

@@ -92,6 +92,8 @@ class StarCatalog:
         data = list()
         found = False
         
+        print(len(self.starList))
+        
         #search for star, if found store info in list
         for star in self.starList:
             if int(starId) == star.identifier:

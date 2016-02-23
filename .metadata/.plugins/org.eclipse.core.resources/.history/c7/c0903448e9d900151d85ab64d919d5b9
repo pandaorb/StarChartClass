@@ -77,8 +77,6 @@ class TestingClass(unittest.TestCase):
     
     # Test that getStarData returns information with valid id
     def test_getStarDataValidShouldStoreAStar(self):
-        unittest.skip("Can't handle you right now.")
         myStarCatalog = StarCatalog()
         data = myStarCatalog.getStarData(1)
         self.assert_(len(data) > 0, 'List is populated')
-        
