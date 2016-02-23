@@ -5,10 +5,10 @@ Assignment.prod.__init__|1456186542000000000|/home/softwareprocess/Desktop/softw
 Assignment.sandbox.__init__|1454796637000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/sandbox/__init__.py
 Assignment.test.StarCatalogSample|1455853418000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/test/StarCatalogSample.py
 Assignment.__init__|1455854036000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/__init__.py
-Assignment.test.StarCatalogTest|1456201444000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/test/StarCatalogTest.py
-Assignment.prod.StarCatalog|1456201589000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/prod/StarCatalog.py
-Assignment.test.__init__|1454796637000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/test/__init__.py
+Assignment.test.StarCatalogTest|1456203178000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/test/StarCatalogTest.py
+Assignment.prod.StarCatalog|1456203166000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/prod/StarCatalog.py
 Assignment.prod.Star|1456163066000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/prod/Star.py
+Assignment.test.__init__|1454796637000000000|/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/test/__init__.py
 -- END DISKCACHE
 -- START DICTIONARY
 11
@@ -32,7 +32,7 @@ sta|9|starCount!11@starsBetween2And5!11@stars!11@StarCatalog!17@star!11@starsLE5
 tes|2|TestingClass!33@TestStarCatalog!41@
 -- END TREE
 -- START TREE 2
-14
+13
 __i|2|__init__!6&18@__init__!7&26@
 bri|2|brightestVal!6&19@brightestVal!8&19@
 dec|1|declination!9&27@
@@ -40,11 +40,10 @@ dim|2|dimmestVal!6&19@dimmestVal!8&19@
 emp|1|emptyCatalog!6&18@
 get|2|getStarCount!6&18@getStarData!6&18@
 ide|1|identifier!9&27@
-ini|0|
 loa|1|loadCatalog!6&18@
 mag|1|magnitude!9&27@
 r_a|1|r_ascension!9&27@
 set|2|setUp!10&42@setMagnitudeBoundries!6&18@
 sta|2|starIds!6&19@starList!6&19@
-tes|14|test_loadCatalogNoneShouldThrowError!11&34@test_getStarCountBrightestOutOfBoundsShouldRaiseError!11&34@test_loadCatalogOutOfBoundsMagnitudeShouldThrowError!11&34@test_emptyCatalogShouldResultInEmptyList!11&34@test_getStarCountDimmestOutOfBoundsShouldRaiseError!11&34@test_getStarCountValidShouldReturnANumber!11&34@test_loadCatalogValidShouldCreateList!11&34@test_getStarDataLetterShouldRaiseError!11&34@testShouldInitializeStarCatalog!10&42@test_getStarDataValidShouldStoreAStar!11&34@test_getStarCountDimmestLetterShouldRaiseError!11&34@test_loadCatalogDNEShouldThrowError!11&34@test_initTestShouldInitialize!11&34@test_getStarCountBrightestLetterShouldRaiseError!11&34@
+tes|13|test_loadCatalogNoneShouldThrowError!11&34@test_getStarCountBrightestOutOfBoundsShouldRaiseError!11&34@test_loadCatalogOutOfBoundsMagnitudeShouldThrowError!11&34@test_emptyCatalogShouldResultInEmptyList!11&34@test_getStarCountDimmestOutOfBoundsShouldRaiseError!11&34@test_getStarCountValidShouldReturnANumber!11&34@test_getStarDataOutOfBoundsShouldRaiseError!11&34@test_loadCatalogValidShouldCreateList!11&34@testShouldInitializeStarCatalog!10&42@test_getStarCountDimmestLetterShouldRaiseError!11&34@test_loadCatalogDNEShouldThrowError!11&34@test_initTestShouldInitialize!11&34@test_getStarCountBrightestLetterShouldRaiseError!11&34@
 -- END TREE

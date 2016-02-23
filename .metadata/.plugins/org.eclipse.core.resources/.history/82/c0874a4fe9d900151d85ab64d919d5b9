@@ -1,0 +1,84 @@
+
+import unittest
+from Assignment.prod.StarCatalog import StarCatalog
+
+class TestingClass(unittest.TestCase):
+
+    # Test that an instance of StarCatalog is creates
+    def test_initTestShouldInitialize(self):
+        myStarCatalog = StarCatalog()
+        self.assertIsInstance(myStarCatalog, StarCatalog)
+        
+    # Test that loadCatalog throws ValueError when
+    #   starFile = None
+    #   starFile ="DNE.txt"
+    #   Magnitude = -45
+    def test_loadCatalogNoneShouldThrowError(self):
+        myStarCatalog = StarCatalog()
+        self.assertRaises(ValueError, lambda: myStarCatalog.loadCatalog())
+        
+    def test_loadCatalogDNEShouldThrowError(self):
+        myStarCatalog = StarCatalog()
+        self.assertRaises(ValueError, lambda: myStarCatalog.loadCatalog("DNE.txt"))
+        
+    def test_loadCatalogOutOfBoundsMagnitudeShouldThrowError(self):
+        myStarCatalog = StarCatalog()
+        self.assertRaises(ValueError, lambda: myStarCatalog.loadCatalog("sao.txt", -45))
+    
+    # Test that loadCatalog populates when 
+    #    starFile = "sao.txt" and Magnitude = 30
+    def test_loadCatalogValidShouldCreateList(self):
+        myStarCatalog = StarCatalog()
+        self.assert_(myStarCatalog.loadCatalog("sao.txt", 30) >= 0, 'Catalog Populated')
+    
+    # Test that emptyCatalog results in an empty list
+    def test_emptyCatalogShouldResultInEmptyList(self):
+        myStarCatalog = StarCatalog()
+        myStarCatalog.loadCatalog("sao.txt")
+        myStarCatalog.emptyCatalog()
+        self.assert_(len(myStarCatalog.starList) == 0, 'Catalog Emptied')
+        
+    # Test that getStarCount raises error if
+    #    dimmest = 'a'
+    #    dimmest = 31
+    #    brightest = 'a'
+    #    brightest = -31
+    def test_getStarCountDimmestLetterShouldRaiseError(self):
+        myStarCatalog = StarCatalog()
+        myStarCatalog.loadCatalog("sao.txt")
+        self.assertRaises(ValueError, lambda: myStarCatalog.getStarCount('a', -30))
+            
+    def test_getStarCountDimmestOutOfBoundsShouldRaiseError(self):
+        myStarCatalog = StarCatalog()
+        myStarCatalog.loadCatalog("sao.txt")
+        self.assertRaises(ValueError, lambda: myStarCatalog.getStarCount(31, -30))
+    
+    def test_getStarCountBrightestLetterShouldRaiseError(self):
+        myStarCatalog = StarCatalog()
+        myStarCatalog.loadCatalog("sao.txt")
+        self.assertRaises(ValueError, lambda: myStarCatalog.getStarCount(30, 'a'))
+    
+    def test_getStarCountBrightestOutOfBoundsShouldRaiseError(self):
+        myStarCatalog = StarCatalog()
+        myStarCatalog.loadCatalog("sao.txt")
+        self.assertRaises(ValueError, lambda: myStarCatalog.getStarCount(30, -31))
+    
+    # Test that getStarCount produces a number given valid input
+    def test_getStarCountValidShouldReturnANumber(self):
+        myStarCatalog = StarCatalog()
+        myStarCatalog.loadCatalog("sao.txt")
+        self.assert_(myStarCatalog.getStarCount(30, -30) > 0, 'Returned Value')
+    
+    # Test that getStarData raises error if
+    #    starID = 5000
+    def test_getStarDataOutOfBoundsShouldRaiseError(self):
+        myStarCatalog = StarCatalog()
+        self.assertRaises(ValueError, lambda: myStarCatalog.getStarData(5000))
+    
+    # Test that getStarData returns information with valid id
+    def test_getStarDataValidShouldStoreAStar(self):
+        unittest.skip("Can't handle you right now.")
+        myStarCatalog = StarCatalog()
+        data = myStarCatalog.getStarData(1)
+        self.assert_(len(data) > 0, 'List is populated')
+        

@@ -1,9 +1,0 @@
-@startuml
-
-class a{
-}
-
-class b{
-}
-
-@enduml

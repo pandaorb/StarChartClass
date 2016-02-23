@@ -74,11 +74,4 @@ class TestingClass(unittest.TestCase):
     def test_getStarDataOutOfBoundsShouldRaiseError(self):
         myStarCatalog = StarCatalog()
         self.assertRaises(ValueError, lambda: myStarCatalog.getStarData(5000))
-    
-    # Test that getStarData returns information with valid id
-    def test_getStarDataValidShouldStoreAStar(self):
-        unittest.skip("Can't handle you right now.")
-        myStarCatalog = StarCatalog()
-        data = myStarCatalog.getStarData(1)
-        self.assert_(len(data) > 0, 'List is populated')
         
