@@ -36,7 +36,6 @@ class StarCatalog:
             #read each line and store data if appropriate
             for star in readChart:
                 catalogNum = star[0:5]
-                print("Id: " + catalogNum)
                 newMagnitude = float(star[80:83])
                 rightA = float(star[129:138])
                 declination = float(star[139:149])

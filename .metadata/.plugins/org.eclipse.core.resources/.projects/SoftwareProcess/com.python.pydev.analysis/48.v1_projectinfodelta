@@ -1,1 +1,16 @@
-DELSTRAssignment.test.StarCatalogTest
+INSTUPAssignment.prod.StarCatalog
+/home/softwareprocess/Desktop/softwareProcess/SoftwareProcess/Assignment/prod/StarCatalog.py
+INFOS:&&1|1|2|0&&3|3|2|1&&3|4|2|1&&3|5|2|1&&3|6|2|1&&2|7|2|1&&2|8|2|1&&2|9|2|1&&2|10|2|1&&2|11|2|1&&2|12|2|1&&3|6|2|13&&3|5|2|13
+brightestVal=6
+setMagnitudeBoundries=12
+starIds=4
+emptyCatalog=9
+dimmestVal=5
+StarCatalog.setMagnitudeBoundries=13
+getStarData=11
+Assignment.prod.StarCatalog=2
+starList=3
+getStarCount=10
+__init__=7
+loadCatalog=8
+StarCatalog=1
