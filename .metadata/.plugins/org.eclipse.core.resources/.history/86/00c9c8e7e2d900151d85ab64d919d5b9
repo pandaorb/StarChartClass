@@ -49,9 +49,7 @@ class TestingClass(unittest.TestCase):
         self.assertRaises(ValueError, lambda: myStarCatalog.getStarCount('a', -30))
             
     def test_getStarCountDimmestOutOfBoundsShouldRaiseError(self):
-        myStarCatalog = StarCatalog()
-        myStarCatalog.loadCatalog("sao.txt")
-        self.assertRaises(ValueError, lambda: myStarCatalog.getStarCount(31, -30))
+        pass
     
     def test_getStarCountBrightestLetterShouldRaiseError(self):
         pass
