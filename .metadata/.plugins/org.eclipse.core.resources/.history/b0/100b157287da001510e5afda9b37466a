@@ -67,13 +67,11 @@ class TestingClass(unittest.TestCase):
     def test_getStarCountValidShouldReturnANumber(self):
         myStarCatalog = StarCatalog()
         myStarCatalog.loadCatalog("sao.txt")
-        myStarCatalog.brightestVal = -30
-        myStarCatalog.dimmestVal = 30
         self.assert_(myStarCatalog.getStarCount(30, -30) > 0, 'Returned Value')
     
     # Test that getStarData raises error if
     #    starID = 5000
-    #def test_getStarDataOutOfBoundsShouldRaiseError(self):
-    #    myStarCatalog = StarCatalog()
-    #    self.assertRaises(ValueError, lambda: myStarCatalog.getStarData(5000))
+    def test_getStarDataOutOfBoundsShouldRaiseError(self):
+        myStarCatalog = StarCatalog()
+        self.assertRaises(ValueError, lambda: myStarCatalog.getStarData(5000))
         
