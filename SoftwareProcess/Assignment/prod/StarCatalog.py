@@ -1,6 +1,15 @@
+'''
+    Created on February 22, 2016
+    Created by Allison Macdonald
+    
+    Updated on February 23, 2016
+    Updated by Allison Macdonald
+'''
+
+
 import Star
 import os.path
-from types import FloatType
+
 
 class StarCatalog:
     "Create an inventory of stars"
@@ -8,93 +17,100 @@ class StarCatalog:
     starIds = set()
     dimmestVal = -30
     brightestVal = 30
-    
-    def __init__(self):   
-        "Initialize StarCatalog with no information"      
-        pass    
-         
-    def loadCatalog(self, starFile=None, Magnitude=6.0): 
-        "Read from file to populate Star Catalog with appropriate magnitudes"        
-        #check for invalid file name
+
+    def __init__(self):
+        "Initialize StarCatalog with no information"
+        pass
+
+    def loadCatalog(self, starFile=None, Magnitude=6.0):
+        "Read from file to populate Star Catalog with appropriate magnitudes"
+        # check for invalid file name
         if starFile == None:
-            raise ValueError('StarCatalog.loadCatalog: File name must be specified.')
+            raise ValueError(
+                'StarCatalog.loadCatalog: File name must be specified.')
         elif len(starFile) <= 0:
             raise ValueError('StarCatalog.loadCatalog:  File name is invalid.')
-        #check for if file DNE
+        # check for if file DNE
         elif not os.path.exists(starFile):
-            raise ValueError('StarCatalog.loadCatalog:  Directory does not exist')
-        #check for invalid magnitude
+            raise ValueError(
+                'StarCatalog.loadCatalog:  Directory does not exist')
+        # check for invalid magnitude
         elif Magnitude > 30 or Magnitude < -30:
-            raise ValueError('StarCatalog.loadCatalog:  Magnitude must be between -30 and 30.')
-        #parameters are valid, so continue
-        else:      
-            #open file
+            raise ValueError(
+                'StarCatalog.loadCatalog:  Magnitude must be between -30 and 30.')
+        # parameters are valid, so continue
+        else:
+            # open file
             fullChart = open(starFile, 'r')
 
-            #store file as list of lines
-            readChart = fullChart.readlines() 
-               
+            # store file as list of lines
+            readChart = fullChart.readlines()
+
             newlyAddedCount = 0
-            #read each line and store data if appropriate
+            # read each line and store data if appropriate
             for star in readChart:
                 catalogNum = star[0:5]
                 newMagnitude = float(star[80:83])
                 rightA = float(star[129:138])
                 declination = star[139:149]
-                
-                #ensure this is not a duplicate star
+
+                # ensure this is not a duplicate star
                 if catalogNum in self.starIds:
-                    raise ValueError('StarCatalog.loadCatalog:  Duplicate stars may not be added to the catalog.')
-                #ensure this is a valid star
+                    raise ValueError(
+                        'StarCatalog.loadCatalog:  Duplicate stars may not be added to the catalog.')
+                # ensure this is a valid star
                 if newMagnitude < Magnitude:
                     self.setMagnitudeBoundries(newMagnitude)
-                    newStar = Star.Star(catalogNum, newMagnitude, rightA, declination)
+                    newStar = Star.Star(
+                        catalogNum, newMagnitude, rightA, declination)
                     self.starList.append(newStar)
                     self.starIds.update(catalogNum)
                     newlyAddedCount += 1
-            
-            #return number of stars added        
-            return newlyAddedCount; 
-        
-    def emptyCatalog(self): 
+
+            # return number of stars added
+            return newlyAddedCount
+
+    def emptyCatalog(self):
         "Remove everything from catalog"
-        numDeleted = len(self.starList)        
+        numDeleted = len(self.starList)
         del self.starList[:]
         self.starIds.clear()
-        return numDeleted      
-       
-    def getStarCount(self, dimmest=None, brightest=None):  
-        "Count the number of stars between brightest and dimmest"       
-        #assign default value if arguments are None
-        if dimmest==None:
+        return numDeleted
+
+    def getStarCount(self, dimmest=None, brightest=None):
+        "Count the number of stars between brightest and dimmest"
+        # assign default value if arguments are None
+        if dimmest == None:
             dimmest = self.dimmestVal
-        if brightest==None:
+        if brightest == None:
             brightest = self.brightestVal
-        
-        #ensure that arguments are valid
+
+        # ensure that arguments are valid
         if int(dimmest) > 30:
-            raise ValueError('StarCatalog.getStarCount:  Dimmest value invalid.')
+            raise ValueError(
+                'StarCatalog.getStarCount:  Dimmest value invalid.')
         elif int(brightest) < -30:
-            raise ValueError('StarCatalog.getStarCount:  Brightest value invalid.')
-       
-        #count stars within range
+            raise ValueError(
+                'StarCatalog.getStarCount:  Brightest value invalid.')
+
+        # count stars within range
         starCount = 0
         for star in self.starList:
             if star.magnitude <= dimmest and star.magnitude >= brightest:
                 starCount += 1
         return starCount
-          
+
     def getStarData(self, starId):
         "Get data for specified star"
-        #check if id passed in is valid
+        # check if id passed in is valid
         if starId == None:
             raise ValueError('StarCatalog.getStarData:  Invalid ID')
-        
-        #create a list for returning data
+
+        # create a list for returning data
         data = list()
         found = False
-        
-        #search for star, if found store info in list
+
+        # search for star, if found store info in list
         for star in self.starList:
             print(star.identifier)
             if int(starId) == int(star.identifier):
@@ -103,12 +119,13 @@ class StarCatalog:
                 data.append(star.r_ascension)
                 data.append(star.declination)
                 found = True
-                
+
         if not found:
-            raise ValueError('StarCatalog.getStarData:  This star was not found.')
+            raise ValueError(
+                'StarCatalog.getStarData:  This star was not found.')
         else:
             return data
-    
+
     def setMagnitudeBoundries(self, newMagnitude):
         "Evaluates new magnitude to determine if it should replace current brightest and dimmest"
         if newMagnitude < self.brightestVal:
